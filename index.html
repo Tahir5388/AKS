@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKS FILMS | AKS Film Production</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-animation">
+            <div class="film-reel">
+                <div class="film-perforation"></div>
+                <div class="film-perforation"></div>
+                <div class="film-perforation"></div>
+            </div>
+            <h1>AKS FILMS</h1>
+            <p>Crafting visual stories that illuminate</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand" data-aos="fade-right">
+                <a href="#">AKS   <span>FILMS</span></a>
+            </div>
+            <div class="nav-links">
+                <a href="#showcase" data-aos="fade-down" data-aos-delay="100">Showcase</a>
+                <a href="#services" data-aos="fade-down" data-aos-delay="200">Services</a>
+                <a href="#crew" data-aos="fade-down" data-aos-delay="300">Crew</a>
+                <a href="#equipment" data-aos="fade-down" data-aos-delay="400">Equipment</a>
+                <a href="#clients" data-aos="fade-down" data-aos-delay="500">Clients</a>
+                <a href="#contact" data-aos="fade-down" data-aos-delay="600">Contact</a>
+            </div>
+            <div class="nav-actions" data-aos="fade-left">
+                <button id="themeToggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="btn login-btn" id="clientLoginBtn">Client Login</button>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <button class="close-mobile-menu" id="closeMobileMenu">&times;</button>
+            <a href="#showcase">Showcase</a>
+            <a href="#services">Services</a>
+            <a href="#crew">Crew</a>
+            <a href="#equipment">Equipment</a>
+            <a href="#clients">Clients</a>
+            <a href="#contact">Contact</a>
+            <button class="btn primary-btn">Client Login</button>
+            <div class="mobile-theme-toggle">
+                <span>Dark Mode</span>
+                <label class="theme-switch">
+                    <input type="checkbox" id="mobileThemeToggle">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-video">
+            <video autoplay muted loop id="heroVideo">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-woman-filming-with-a-camera-1582-large.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 data-aos="fade-up" data-aos-delay="200">We Bring Stories to Life</h1>
+            <p data-aos="fade-up" data-aos-delay="300">Premium film production services for brands, agencies, and creators</p>
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+                <button class="btn primary-btn" id="exploreBtn">Explore Our Work</button>
+                <button class="btn secondary-btn" id="contactBtn">Get a Quote</button>
+            </div>
+        </div>
+        <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="500">
+            <span>Scroll</span>
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Showcase Section -->
+    <section class="showcase" id="showcase">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Our Portfolio</h2>
+                <p>A selection of our recent projects</p>
+                <div class="filter-buttons" data-aos="fade-up" data-aos-delay="100">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="commercial">Commercials</button>
+                    <button class="filter-btn" data-filter="narrative">Narrative</button>
+                    <button class="filter-btn" data-filter="documentary">Documentary</button>
+                    <button class="filter-btn" data-filter="music-video">Music Videos</button>
+                </div>
+            </div>
+            <div class="showcase-grid">
+                <!-- Project items will be added dynamically via JavaScript -->
+            </div>
+            <div class="view-more" data-aos="fade-up">
+                <button class="btn secondary-btn" id="loadMoreProjects">Load More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Our Services</h2>
+                <p>End-to-end production solutions</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3>Full Production</h3>
+                    <p>From concept development to final delivery, we handle every aspect of your production.</p>
+                    <ul class="service-features">
+                        <li>Pre-production planning</li>
+                        <li>Casting & location scouting</li>
+                        <li>Cinematography</li>
+                        <li>Post-production</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Cinematography</h3>
+                    <p>Stunning visuals captured by our award-winning cinematographers.</p>
+                    <ul class="service-features">
+                        <li>Digital & film formats</li>
+                        <li>Drone cinematography</li>
+                        <li>Steadicam & gimbal work</li>
+                        <li>360° video production</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3>Post-Production</h3>
+                    <p>Professional editing, color grading, and visual effects services.</p>
+                    <ul class="service-features">
+                        <li>4K/8K editing</li>
+                        <li>Color correction & grading</li>
+                        <li>Motion graphics & VFX</li>
+                        <li>Sound design & mixing</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Creative Development</h3>
+                    <p>Concept development and creative direction for your projects.</p>
+                    <ul class="service-features">
+                        <li>Script writing</li>
+                        <li>Storyboarding</li>
+                        <li>Creative direction</li>
+                        <li>Brand strategy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Crew Section -->
+    <section class="crew" id="crew">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Our Crew</h2>
+                <p>Meet our talented team of professionals</p>
+            </div>
+            <div class="crew-slider" data-aos="fade-up">
+                <div class="crew-slider-container" id="crewSlider">
+                    <!-- Crew members will be added dynamically via JavaScript -->
+                </div>
+                <button class="slider-nav prev" id="crewPrev"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-nav next" id="crewNext"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="crew-details-modal" id="crewModal">
+                <div class="crew-modal-content">
+                    <span class="close-crew-modal">&times;</span>
+                    <div class="crew-modal-body" id="crewModalBody">
+                        <!-- Crew details will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment Section -->
+    <section class="equipment" id="equipment">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Our Equipment</h2>
+                <p>State-of-the-art gear for your production</p>
+            </div>
+            <div class="equipment-tabs" data-aos="fade-up">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="cameras">Cameras</button>
+                    <button class="tab-btn" data-tab="lenses">Lenses</button>
+                    <button class="tab-btn" data-tab="lighting">Lighting</button>
+                    <button class="tab-btn" data-tab="support">Support</button>
+                    <button class="tab-btn" data-tab="audio">Audio</button>
+                </div>
+                <div class="tab-content active" id="cameras">
+                    <div class="equipment-grid">
+                        <!-- Camera equipment will be added dynamically -->
+                    </div>
+                </div>
+                <div class="tab-content" id="lenses">
+                    <div class="equipment-grid">
+                        <!-- Lenses equipment will be added dynamically -->
+                    </div>
+                </div>
+                <div class="tab-content" id="lighting">
+                    <div class="equipment-grid">
+                        <!-- Lighting equipment will be added dynamically -->
+                    </div>
+                </div>
+                <div class="tab-content" id="support">
+                    <div class="equipment-grid">
+                        <!-- Support equipment will be added dynamically -->
+                    </div>
+                </div>
+                <div class="tab-content" id="audio">
+                    <div class="equipment-grid">
+                        <!-- Audio equipment will be added dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="clients" id="clients">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Our Clients</h2>
+                <p>Brands we've had the pleasure to work with</p>
+            </div>
+            <div class="client-logos" data-aos="fade-up">
+                <div class="client-logo"><img src="https://via.placeholder.com/150x80?text=Brand+1" alt="Client 1"></div>
+                <div class="client-logo"><img src="https://via.placeholder.com/150x80?text=Brand+2" alt="Client 2"></div>
+                <div class="client-logo"><img src="https://via.placeholder.com/150x80?text=Brand+3" alt="Client 3"></div>
+                <div class="client-logo"><img src="https://via.placeholder.com/150x80?text=Brand+4" alt="Client 4"></div>
+                <div class="client-logo"><img src="https://via.placeholder.com/150x80?text=Brand+5" alt="Client 5"></div>
+                <div class="client-logo"><img src="https://via.placeholder.com/150x80?text=Brand+6" alt="Client 6"></div>
+            </div>
+            <div class="testimonials" data-aos="fade-up">
+                <div class="testimonial-slider" id="testimonialSlider">
+                    <!-- Testimonials will be added dynamically -->
+                </div>
+                <div class="testimonial-nav">
+                    <button class="testimonial-prev" id="testimonialPrev"><i class="fas fa-chevron-left"></i></button>
+                    <div class="testimonial-dots" id="testimonialDots"></div>
+                    <button class="testimonial-next" id="testimonialNext"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right">
+                    <h2>Get In Touch</h2>
+                    <p>Ready to start your next project? Contact us for a consultation.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Our Studio</h4>
+                                <p>123 Film Avenue, Hollywood, CA 90210</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Call Us</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email Us</h4>
+                                <p>info@luminousfilms.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Working Hours</h4>
+                                <p>Monday - Friday: 9am - 6pm</p>
+                                <p>Saturday: 10am - 4pm</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="productionInquiryForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="projectType">Project Type</label>
+                            <select id="projectType" required>
+                                <option value="">Select project type</option>
+                                <option value="commercial">Commercial</option>
+                                <option value="narrative">Narrative Film</option>
+                                <option value="documentary">Documentary</option>
+                                <option value="music-video">Music Video</option>
+                                <option value="corporate">Corporate Video</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">Project Budget</label>
+                            <select id="budget">
+                                <option value="">Select budget range</option>
+                                <option value="under-10k">Under $10,000</option>
+                                <option value="10k-50k">$10,000 - $50,000</option>
+                                <option value="50k-100k">$50,000 - $100,000</option>
+                                <option value="100k-250k">$100,000 - $250,000</option>
+                                <option value="over-250k">Over $250,000</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Project Details</label>
+                            <textarea id="message" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="fileUpload">Upload Files (Optional)</label>
+                            <input type="file" id="fileUpload" multiple>
+                        </div>
+                        <button type="submit" class="btn primary-btn">Submit Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Timeline Modal -->
+    <div class="project-modal" id="projectModal">
+        <div class="project-modal-content">
+            <span class="close-project-modal">&times;</span>
+            <div class="project-modal-body" id="projectModalBody">
+                <!-- Project details will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Client Login Modal -->
+    <div class="client-login-modal" id="clientLoginModal">
+        <div class="client-login-content">
+            <span class="close-client-login">&times;</span>
+            <h2>Client Portal</h2>
+            <form id="clientLoginForm">
+                <div class="form-group">
+                    <label for="clientEmail">Email</label>
+                    <input type="email" id="clientEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="clientPassword">Password</label>
+                    <input type="password" id="clientPassword" required>
+                </div>
+                <button type="submit" class="btn primary-btn">Login</button>
+                <div class="login-options">
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                    <p>Don't have an account? <a href="#" class="request-access">Request access</a></p>
+                </div>
+            </form>
+            <div class="client-features">
+                <h3>Client Portal Features:</h3>
+                <ul>
+                    <li><i class="fas fa-video"></i> Project progress tracking</li>
+                    <li><i class="fas fa-cloud-upload-alt"></i> Secure file sharing</li>
+                    <li><i class="fas fa-comments"></i> Direct messaging with team</li>
+                    <li><i class="fas fa-file-invoice-dollar"></i> Budget & invoice management</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>LUMINOUS FILMS</h3>
+                    <p>Crafting visual stories that illuminate and inspire. Professional film production services for brands, agencies, and creators.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#showcase">Portfolio</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#crew">Our Crew</a></li>
+                        <li><a href="#equipment">Equipment</a></li>
+                        <li><a href="#clients">Clients</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Film Production</a></li>
+                        <li><a href="#">Commercial Production</a></li>
+                        <li><a href="#">Documentary Filmmaking</a></li>
+                        <li><a href="#">Music Videos</a></li>
+                        <li><a href="#">Post-Production</a></li>
+                        <li><a href="#">Equipment Rental</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for updates and industry insights.</p>
+                    <form id="footerNewsletter">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Luminous Films. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
