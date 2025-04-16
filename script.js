@@ -1663,3 +1663,45 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial scroll check for all sections
     setTimeout(checkScroll, 500);
 });
+// Mobile Menu JavaScript
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeMobileMenu = document.getElementById('closeMobileMenu');
+    const body = document.body;
+
+    // Toggle mobile menu
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.add('active');
+        body.style.overflow = 'hidden';
+    });
+
+    // Close mobile menu
+    closeMobileMenu.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        body.style.overflow = 'auto';
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+            mobileMenu.classList.remove('active');
+            body.style.overflow = 'auto';
+        }
+    });
+
+    // Theme toggle for mobile
+    const mobileThemeToggle = document.getElementById('mobileThemeToggle');
+    const themeToggle = document.getElementById('themeToggle');
+    
+    mobileThemeToggle.addEventListener('change', function() {
+        document.documentElement.setAttribute('data-theme', this.checked ? 'dark' : 'light');
+        themeToggle.querySelector('i').classList.toggle('fa-moon');
+        themeToggle.querySelector('i').classList.toggle('fa-sun');
+    });
+
+    // Prevent scroll when menu is open
+    mobileMenu.addEventListener('touchmove', function(e) {
+        e.preventDefault();
+    }, { passive: false });
+});
